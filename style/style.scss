@@ -168,7 +168,7 @@ body.-lock {
   @media (max-width: 767px) {
     display: block;
     position: fixed;
-    top: 39px;
+    top: 44px;
     right: 47px;
     z-index: 30;
     transition: all 0.4s linear;
@@ -703,8 +703,9 @@ body.-lock {
   grid-template-columns: 1fr 1fr 1fr;
 
   @media (max-width: 767px) {
-    grid-template-columns: 1fr 1fr;
-    padding: 29px 0 0;
+    grid-template-columns: 1fr;
+    padding: 29px 40px 0;
+    row-gap: 10px;
   }
 
   &__picture {
