@@ -45,7 +45,6 @@ body {
 
 body.-lock {
   overflow: hidden;
-  background-color: darkblue;
 }
 
 .container {
@@ -260,7 +259,6 @@ body.-lock {
   padding: 102px 20px 0 20px;
   position: fixed;
   top: 0;
-  left: -100%;
   z-index: 20;
   display: -webkit-box;
   display: -ms-flexbox;
