@@ -283,14 +283,16 @@ body.-lock {
   background-repeat: no-repeat;
   background-position: 25%;
   background-size: cover;
+  background-color: #08454a;
+  background-blend-mode: multiply;
 }
 
 .burger__link {
   display: block;
   padding: 25px 0;
-  font-size: 13px;
-  line-height: 15px;
-  color: #000000;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
   font-weight: 700;

@@ -246,15 +246,17 @@ body.-lock {
       background-repeat: no-repeat;
       background-position: 25%;
       background-size: cover;
+      background-color: $colorGreen;
+      background-blend-mode: multiply;
     }
   }
 
   &__link {
     display: block;
     padding: 25px 0;
-    font-size: 13px;
-    line-height: 15px;
-    color: $colorBlack;
+    font-size: 18px;
+    line-height: 21px;
+    color: $colorWhite;
     text-transform: uppercase;
     text-decoration: none;
     font-weight: 700;
