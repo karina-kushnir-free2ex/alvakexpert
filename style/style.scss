@@ -1,31 +1,34 @@
-@import url("https://fonts.googleapis.com/css2?family=Cardo:ital@1&family=Raleway:wght@400;500;700;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Raleway", sans-serif;
+  font-family: "Montserrat", sans-serif;
   border: none;
   list-style: none;
 }
 
 $colorWhite: #ffffff;
-$colorRed: #ff4343;
-$colorRedDark: #e71414;
-$colorTitle: #2d3033;
-$colorText: #6c7279;
+$colorYellow: #e6b656;
+$colorYellowDark: #bf8717;
+$colorTitle: #ffffff;
+$colorText: #ffffff;
 $colorBlack: #000000;
-$colorRedActive: #b90c0ccc;
+$colorYellowLight: #f4dcac;
+$colorYellowActive: #af7500;
 $colorBorder: #c6cbcd;
+$colorGreen: #08454a;
+$colorGreenLight: #0a555c;
+$colorGreenDark: rgb(6, 49, 53);
 
 @mixin subtitle {
-  font-size: 24px;
-  line-height: 28px;
+  font-size: 22px;
+  line-height: 26px;
   text-align: center;
 }
 
 @mixin text {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 21px;
   text-align: center;
 }
@@ -64,8 +67,9 @@ body.-lock {
   position: fixed;
   width: 100%;
   z-index: 20;
-  background-color: $colorBlack;
+  background-color: $colorGreen;
   padding: 0 20px;
+  border-bottom: 1px solid $colorWhite;
 
   .container {
     max-width: 1170px;
@@ -120,7 +124,7 @@ body.-lock {
     }
     a {
       text-decoration: none;
-      padding: 32px 0;
+      padding: 34px 0;
       font-size: 13px;
       font-weight: 700;
       line-height: 15px;
@@ -152,10 +156,10 @@ body.-lock {
         width: 100%;
       }
       &:active::after {
-        background-color: $colorRed;
+        background-color: $colorYellow;
       }
       &:active {
-        color: $colorRed;
+        color: $colorYellow;
       }
     }
   }
@@ -256,7 +260,7 @@ body.-lock {
     font-weight: 700;
 
     &:active {
-      color: $colorRed;
+      color: $colorYellow;
     }
   }
 }
@@ -292,8 +296,8 @@ body.-lock {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: #a2a3a5;
-    opacity: 0.6;
+    background-color: $colorGreen;
+    opacity: 0.9;
   }
 
   &__block {
@@ -301,12 +305,12 @@ body.-lock {
     margin-left: auto;
   }
   &__title {
-    font-size: 64px;
+    font-size: 60px;
     line-height: 75px;
     font-weight: 900;
     text-transform: uppercase;
     text-align: right;
-    color: $colorBlack;
+    color: $colorWhite;
     margin-bottom: 31.43px;
 
     @media (max-width: 1024px) {
@@ -328,7 +332,7 @@ body.-lock {
   &__text {
     @include subtitle();
     text-align: right;
-    color: $colorBlack;
+    color: $colorYellowLight;
     margin-bottom: 82px;
 
     @media (max-width: 1024px) {
@@ -352,16 +356,17 @@ body.-lock {
     @include subtitle();
     font-weight: 900;
     display: block;
-    background-color: $colorRed;
+    background-color: $colorYellow;
     padding: 26px;
     max-width: 370px;
     width: 100%;
     text-transform: uppercase;
-    color: $colorWhite;
+    color: #08454a;
     text-align: center;
     margin: 0 0 0 auto;
     text-decoration: none;
     transition: all 0.3s linear;
+    box-shadow: 0 16px 16px 0 #08454a;
 
     @media (max-width: 1024px) {
       max-width: 314px;
@@ -377,19 +382,21 @@ body.-lock {
     }
 
     &:hover {
-      background-color: $colorRedDark;
+      background-color: $colorYellowDark;
+      color: $colorWhite;
       cursor: pointer;
     }
 
     &:active {
-      box-shadow: 4px 4px 30px $colorRed;
-      background-color: $colorRed;
+      box-shadow: 4px 4px 30px $colorYellow;
+      background-color: $colorYellow;
       cursor: pointer;
     }
   }
 }
 .advantages {
   padding: 104px 0 0;
+  background-color: $colorGreen;
 
   @media (max-width: 767px) {
     padding: 39px 0 32px;
@@ -399,6 +406,7 @@ body.-lock {
     text-transform: uppercase;
     margin-bottom: 80px;
     font-weight: 900;
+    color: $colorWhite;
 
     @media (max-width: 1024px) {
       margin-bottom: 50px;
@@ -483,6 +491,7 @@ body.-lock {
 
 .about {
   padding: 104px 0 64px;
+  background-color: $colorGreen;
 
   @media (max-width: 767px) {
     padding: 39px 0 32px;
@@ -492,6 +501,7 @@ body.-lock {
     text-transform: uppercase;
     margin-bottom: 60px;
     font-weight: 900;
+    color: $colorWhite;
   }
 
   &__container {
@@ -575,7 +585,7 @@ body.-lock {
     font-size: 40px;
     line-height: 48px;
     font-weight: 700;
-    color: $colorBlack;
+    color: $colorYellowLight;
 
     @media (max-width: 767px) {
       font-size: 32px;
@@ -598,7 +608,7 @@ body.-lock {
     font-size: 20px;
     line-height: 22px;
     font-weight: 600;
-    color: $colorBlack;
+    color: $colorWhite;
     text-align: right;
     padding-right: 26px;
 
@@ -631,7 +641,7 @@ body.-lock {
 
 .stages {
   padding: 104px 0 64px;
-  background-color: $colorRed;
+  background-color: $colorYellow;
 
   @media (max-width: 767px) {
     padding: 39px 0 32px;
@@ -639,7 +649,7 @@ body.-lock {
 
   &__subtitle {
     @include subtitle();
-    color: $colorWhite;
+    color: $colorGreen;
     text-transform: uppercase;
     margin-bottom: 60px;
     font-weight: 900;
@@ -664,14 +674,14 @@ body.-lock {
   }
 
   &__number {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 50px;
+    line-height: 56px;
     font-weight: 500;
     text-align: center;
-    color: $colorWhite;
+    color: $colorGreenLight;
     width: 60px;
     height: 60px;
-    border: 2px solid white;
+    border: 2px solid $colorGreenLight;
     border-radius: 50%;
     margin: 0 auto 14px;
   }
@@ -691,7 +701,7 @@ body.-lock {
   &__text {
     @include text();
     text-align: center;
-    color: $colorWhite;
+    color: $colorGreen;
   }
 }
 
@@ -699,6 +709,7 @@ body.-lock {
   padding: 104px 0 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+  background-color: $colorGreen;
 
   @media (max-width: 767px) {
     grid-template-columns: 1fr;
@@ -709,7 +720,7 @@ body.-lock {
   &__picture {
     display: block;
     position: relative;
-    border: 1px solid #fff;
+    border: 1px solid $colorYellow;
 
     &::before {
       content: "";
@@ -731,7 +742,7 @@ body.-lock {
     position: absolute;
     left: 0;
     top: 0;
-    background-color: $colorRed;
+    background-color: $colorYellowDark;
     opacity: 0;
     display: flex;
     width: 100%;
@@ -776,14 +787,19 @@ body.-lock {
   }
   &__picture:active &__hover {
     display: flex;
-    background-color: $colorRedActive;
-    opacity: 0.8;
+    background-color: $colorGreen;
+    color: $colorYellow;
+    opacity: 0.9;
+  }
+  &__picture:active &__title {
+    color: $colorYellow;
   }
 }
 
 .footer {
   padding: 71px 0 69px;
-  background-color: $colorBlack;
+  background-color: $colorGreen;
+  border-top: 1px solid $colorWhite;
 
   @media (max-width: 1024px) {
     padding: 47px 0 42px;
@@ -900,19 +916,20 @@ body.-lock {
 
     &:hover {
       cursor: pointer;
-      border: 1px solid $colorRed;
+      border: 1px solid $colorYellow;
     }
     &:active {
-      box-shadow: 1px 1px 2px 2px $colorRed;
+      box-shadow: 1px 1px 2px 2px $colorYellow;
     }
     &:hover path {
-      fill: $colorRed;
+      fill: $colorYellow;
     }
   }
 }
 
 .call {
   padding: 108px 0 100px;
+  background-color: $colorYellow;
 
   @media (max-width: 1024px) {
     padding: 90px 0 78px;
@@ -927,7 +944,7 @@ body.-lock {
     line-height: 35px;
     font-weight: 500;
     margin-bottom: 23.29px;
-    color: $colorBlack;
+    color: $colorGreen;
     text-align: center;
 
     @media (max-width: 1024px) {
@@ -944,7 +961,7 @@ body.-lock {
 
   &__text {
     @include text();
-    color: $colorBlack;
+    color: $colorGreenDark;
     margin-bottom: 49.14px;
     font-weight: 700;
 
@@ -964,7 +981,7 @@ body.-lock {
     @include subtitle();
     font-weight: 900;
     display: block;
-    background-color: $colorRed;
+    background-color: $colorGreen;
     padding: 25px;
     max-width: 370px;
     width: 100%;
@@ -974,6 +991,7 @@ body.-lock {
     text-align: center;
     margin: 0 auto;
     transition: all 0.4s linear;
+    box-shadow: 0 16px 16px 0 $colorYellowDark;
 
     @media (max-width: 1024px) {
       @include text();
@@ -986,13 +1004,14 @@ body.-lock {
     }
 
     &:hover {
-      background-color: $colorRedDark;
+      background-color: $colorGreenDark;
       cursor: pointer;
+      color: $colorWhite;
     }
 
     &:active {
-      box-shadow: 4px 4px 30px $colorRed;
-      background-color: $colorRed;
+      box-shadow: 4px 4px 30px $colorGreenLight;
+      background-color: $colorGreenLight;
       cursor: pointer;
     }
   }
@@ -1037,21 +1056,23 @@ body.-lock {
     width: 100%;
   }
   &:active::after {
-    background-color: $colorRed;
+    background-color: $colorYellow;
   }
   &:active {
-    color: $colorRed;
+    color: $colorYellow;
   }
 }
 
 .repair {
   padding: 114px 0 64px;
+  background-color: $colorYellow;
 
   @media (max-width: 767px) {
     padding: 99px 0 32px;
   }
   &__subtitle {
     @include subtitle();
+    color: $colorGreen;
     text-transform: uppercase;
     margin-bottom: 60px;
     font-weight: 900;
@@ -1118,6 +1139,7 @@ body.-lock {
 
 .porch {
   padding: 114px 0 64px;
+  background-color: $colorYellow;
 
   @media (max-width: 767px) {
     padding: 99px 0 32px;
@@ -1128,6 +1150,7 @@ body.-lock {
     text-transform: uppercase;
     margin-bottom: 60px;
     font-weight: 900;
+    color: $colorGreen;
 
     @media (max-width: 1024px) {
       margin-bottom: 50px;
@@ -1140,6 +1163,7 @@ body.-lock {
 
 .facades {
   padding: 114px 0 64px;
+  background-color: $colorYellow;
 
   @media (max-width: 767px) {
     padding: 99px 0 32px;
@@ -1150,6 +1174,7 @@ body.-lock {
     text-transform: uppercase;
     margin-bottom: 60px;
     font-weight: 900;
+    color: $colorGreen;
 
     @media (max-width: 1024px) {
       margin-bottom: 50px;
